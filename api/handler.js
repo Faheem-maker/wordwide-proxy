@@ -21,14 +21,22 @@ export default async function handler(req, res) {
     delete headers.connection
     delete headers["content-length"]
 
+    const contentType = req.headers["content-type"] || ""
+
+    let body
+    if (req.method === "GET" || req.method === "HEAD") {
+        body = undefined
+    } else if (contentType.includes("application/json")) {
+        body = JSON.stringify(req.body)
+    } else {
+        body = req.body
+    }
+
     // Forward request
     const upstreamResponse = await fetch(targetUrl, {
         method: req.method,
         headers,
-        body:
-            req.method === "GET" || req.method === "HEAD"
-                ? undefined
-                : req.body,
+        body,
     })
 
     // Copy response headers

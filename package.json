@@ -1,0 +1,19 @@
+{
+  "name": "wordwide-proxy",
+  "version": "1.0.0",
+  "main": "api/handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Faheem-maker/wordwide-proxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Faheem-maker/wordwide-proxy/issues"
+  },
+  "homepage": "https://github.com/Faheem-maker/wordwide-proxy#readme",
+  "description": ""
+}

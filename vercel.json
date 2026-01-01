@@ -1,6 +1,6 @@
 {
     "functions": {
-        "api/proxy.js": {
+        "api/handler.js": {
             "memory": 256,
             "maxDuration": 10
         }
@@ -8,7 +8,7 @@
     "rewrites": [
         {
             "source": "/(.*)",
-            "destination": "/api/proxy?path=$1"
+            "destination": "/api/handler?path=$1"
         }
     ]
 }
